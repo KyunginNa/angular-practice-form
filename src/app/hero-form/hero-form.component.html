@@ -1,0 +1,19 @@
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" type="text" class="form-control" required />
+  </div>
+  <div class="form-group">
+    <label for="alter-ego">Alter Ego</label>
+    <input id="alter-ego" class="form-control" type="text" />
+  </div>
+  <div class="form-group">
+    <label for="power">Super power</label>
+    <select id="power" class="form-control" required>
+      <option *ngFor="let pow of powers" [value]="pow">
+        {{pow}}
+      </option>
+    </select>
+  </div>
+  <button type="submit">Submit</button>
+</form>
